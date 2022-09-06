@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eStudiez</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../CSS/Globel.css">
+    <link rel="stylesheet" href="../CSS/Student.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../External_Links/Bootstrap/css/bootstrap.css">
+    <!-- jQuery -->
+    <Script src="../External_Links/jQuery/JQuery.js"></Script>
+    <!-- Bootstrap js -->
+    <script src="../External_Links/Bootstrap/js/bootstrap.js"></script>
+    <!-- JavaScript -->
+    <script src="../JavaScript/GlobelScript.js"></script>
+    <script src="../JavaScript/Student.js"></script>
+    <!-- Database -->
+    <script src="../Database/Studentsdb.js"></script>
+    <!-- Chart API CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <div class="bgblur" id="bgblue" style="display:none ;"></div>
+
+    <div class="Sidebar" id="sidebar" style="width: 250px;">
+        <div class="sidebarLogo" id="logo">
+            <img src="../Assets/Logo_and_Icon/Logo.png" alt="">
+        </div>
+        <div class="profilebox">
+            <img src="https://www.seekpng.com/png/detail/847-8474751_download-empty-profile.png" alt="">
+            <h1>Muhammad Tanzeel Mehtab</h1>
+            <h2>Student</h2>
+            <div class="profilebox-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                </svg>
+                <svg onclick="logout()" xmlns="http://www.w3.org/2000/svg" style="stroke: wrgb(7, 7, 7); color: white;
+                      stroke-width: 1;" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                    <path d="M7.5 1v7h1V1h-1z" />
+                    <path
+                        d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                </svg>
+            </div>
+        </div>
+        <div class="sidebar-items">
+            <ul>
+                <li id="Gradepagebar" class="" style="background-color: #31a6ea;">
+                    <a href="#" onclick="OpenGradePage()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-journals"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                            <path
+                                d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z" />
+                        </svg>
+                        Grade Book
+                    </a>
+                </li>
+                <li id="Studypagebar" class="">
+                    <a href="#" onclick="OpenStudyPage()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2Z" />
+                            <path
+                                d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783.059-.187.09-.386.09-.593V4a2 2 0 0 0-2-2H2Z" />
+                        </svg>
+                        Study Meterial
+                    </a>
+                </li>
+                <li id="ProgressBar" class="Progresspage">
+                    <a href="#" onclick="OpenProgresPage()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-graph-up-arrow"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z" />
+                            </svg>
+                            Progress Report
+                        </a>
+                </li>
+                <li id="RevisionBar" class="Revisepage">
+                    <a href="#"onclick="OpenRevisionPage()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                        Revision Schedule
+                    </a>
+                </li>
+                <li id="feedbackbar" class="Feedbackpage">
+                    <a href="#" onclick="OpenFeedBackPage()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-right-dots"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                            <path
+                                d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        Feedback
+                    </a>
+                </li>
+                <li id="contactbar" class="Contactpage">
+                    <a href="#" onclick="">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="Navbar" id="Navbar">
+        <div class="left">
+            <svg class="sidebarToggler" onclick="togglesidebar()" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <svg class="searchicon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </div>
+        <div class="right">
+            <div class="accountBox" onclick="accountpopup()">
+                <img class="dp" src="https://www.seekpng.com/png/detail/847-8474751_download-empty-profile.png" alt="">
+            </div>
+        </div>
+        <div class="accountPopup" id="accountpopup" style="opacity: 0;">
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-right"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                    </svg>
+                    <a href="">Inbox</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                    </svg>
+                    <a href="">Setting</a>
+                </li>
+                <li class="poplogout" >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                        <path d="M7.5 1v7h1V1h-1z" />
+                        <path
+                            d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                    </svg>
+                    <a href="../index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="Page" id="Page">
+        <!-- Grade Page -->
+        <div id="GradePage" >
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Grades
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="row m-0 p-0 GradeBoxAll">
+                    <div class="col-lg-4 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1>Name<h1>
+                                    <h2>Muhammad Tanzeel Mehtab</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1>Study Program<h1>
+                                    <h2>Software Engineering</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1>Student ID<h1>
+                                    <h2>1352747</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1>Percentage<h1>
+                                    <h2>92.5%</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1>Semester<h1>
+                                    <h2>1st</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardBody-Content">
+                    <table class="table mt-4 table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="col-3">Subject</th>
+                                <th class="col-2">Maths</th>
+                                <th class="col-2">English</th>
+                                <th class="col-2">Computer Science</th>
+                                <th class="col-2">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="StudentMarks">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Study Page -->
+        <div id="StudyPage" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Study Material
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="row m-0 p-0 StudyMaterial">
+                    <div class="col-lg-6  mt-4">
+                        <div class="StudyMaterialBox">
+                            <div class="StudyMaterialHead">
+                                <h1>CS-001 Introduction To Computer</h1>
+                                <h2>Compter Science</h2>
+                            </div>
+                            <div class="StudyMaterialBody">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../Assets/Images/Teacher Images/1.png" class="Teacherimage" alt="">
+                                    </div>
+                                    <div class="col-8 TeacherDetails">
+                                        <h1>Miss Muneeba</h1>
+                                        <h2>BSCS in Computer Science</h2>
+                                        <h3>University Of Pakistan</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="StudyMaterialfooter">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                        </svg>
+                                        Lectures
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-files" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
+                                        </svg>
+                                        Material
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-envelope-paper" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2H4Zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6v-2.55Zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v5.417Zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267v2.55Zm13 .566v5.734l-4.778-2.867L15 7.383Zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083l6.965 4.18ZM1 13.116V7.383l4.778 2.867L1 13.117Z" />
+                                        </svg>
+                                        Feedback
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                        </svg>
+                                        Notification
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mt-4">
+                        <div class="StudyMaterialBox">
+                            <div class="StudyMaterialHead">
+                                <h1>ENG-001 Introduction To English</h1>
+                                <h2>English</h2>
+                            </div>
+                            <div class="StudyMaterialBody">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../Assets/Images/Teacher Images/2.png" class="Teacherimage" alt="">
+                                    </div>
+                                    <div class="col-8 TeacherDetails">
+                                        <h1>Miss Amna</h1>
+                                        <h2>PHD in English Language</h2>
+                                        <h3>University Of Manchester</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="StudyMaterialfooter">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                        </svg>
+                                        Lectures
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-files" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
+                                        </svg>
+                                        Material
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-envelope-paper" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2H4Zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6v-2.55Zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v5.417Zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267v2.55Zm13 .566v5.734l-4.778-2.867L15 7.383Zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083l6.965 4.18ZM1 13.116V7.383l4.778 2.867L1 13.117Z" />
+                                        </svg>
+                                        Feedback
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                        </svg>
+                                        Notification
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4">
+                        <div class="StudyMaterialBox">
+                            <div class="StudyMaterialHead">
+                                <h1>MTH-001 Introduction To Maths</h1>
+                                <h2>Business Maths</h2>
+                            </div>
+                            <div class="StudyMaterialBody">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../Assets/Images/Teacher Images/3.png" class="Teacherimage" alt="">
+                                    </div>
+                                    <div class="col-8 TeacherDetails">
+                                        <h1>Sir Bilal</h1>
+                                        <h2>PHD in Business Maths</h2>
+                                        <h3>University Of London</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="StudyMaterialfooter">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                        </svg>
+                                        Lectures
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-files" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
+                                        </svg>
+                                        Material
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-envelope-paper" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2H4Zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6v-2.55Zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v5.417Zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267v2.55Zm13 .566v5.734l-4.778-2.867L15 7.383Zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083l6.965 4.18ZM1 13.116V7.383l4.778 2.867L1 13.117Z" />
+                                        </svg>
+                                        Feedback
+                                    </div>
+                                    <div class="col-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20px"
+                                            fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                        </svg>
+                                        Notification
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Page -->
+        <div id="ProgressPage" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Progress Book
+                </h1>
+            </div>
+            <div class="CardBody">
+                <p class="mt-3" style=" font-size:12px; text-align: center; padding-left:20px; padding-right:20px;">
+                    Hover on chart to see values in percentage. Click on fields to hide that as shown in figure<img
+                        style=" border:1px solid rgba(0, 0, 0, 0.301); margin-left: 10px;"
+                        src="../Assets/Images/Other Images/Progresshelpimage.png"></p>
+
+                <div class="row m-0 p-0 StudyMaterial">
+                    <div class="col-lg-6  mt-4">
+                        <div class="progresschart">
+                            <h1>Attendence</h1>
+                            <canvas id="Class" style="width:100%;width:100%"></canvas>
+                            <script>
+                                var Title = ["Presents", "Absents", "Leaves"];
+                                var attendence = [82, 10, 8];
+                                var barColors = [
+                                    "#00a2e2",
+                                    "#595959",
+                                    "#68ff72",
+                                ];
+                                new Chart("Class", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: Title,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: attendence
+                                        }]
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mt-4">
+                        <div class="progresschart">
+                            <h1>Quiz</h1>
+                            <canvas id="Quiz" style="width:100%;width:100%"></canvas>
+                            <script>
+                                var Title = ["Attempted", "Missed"];
+                                var attendence = [88, 12];
+                                var barColors = [
+                                    "#00a2e2",
+                                    "#595959",
+                                    "#eaf204",
+                                ];
+                                new Chart("Quiz", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: Title,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: attendence
+                                        }]
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mt-4">
+                        <div class="progresschart">
+                            <h1>Class Participation</h1>
+                            <canvas id="CP" style="width:100%;width:100%"></canvas>
+                            <script>
+                                var Title = ["Availed", "Missed"];
+                                var attendence = [70, 30];
+                                var barColors = [
+                                    "#00a2e2",
+                                    "#595959",
+                                ];
+                                new Chart("CP", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: Title,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: attendence
+                                        }]
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule Page -->
+        <div id="schedulePage" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Schedule Page
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="row m-0 p-0 GradeBoxAll">
+                    <div class="col-lg-12 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1 style="font-size: 27px;">Computer Science<h1>
+                            <h2>Tomorrow class will be OFF due to heavy rain</h2>
+                            <h2 style="font-size: 16px; color:brown;">10-AUG-2022</h2>
+                        </div>    
+                    </div>
+                    <div class="col-lg-12 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1 style="font-size: 27px;">Sports<h1>
+                            <h2>Today will be Cricket Selection So, Be prepared for selection who are intrested</h2>
+                            <h2 style="font-size: 16px; color:brown;">9-AUG-2022</h2>
+                        </div>    
+                    </div>
+                    <div class="col-lg-12 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1 style="font-size: 27px;">English<h1>
+                            <h2>Quiz is Oppened! You can take quiz before 9 AUG.</h2>
+                            <h2 style="font-size: 16px; color:brown;">8-AUG-2022</h2>
+                        </div>    
+                    </div>
+                    <div class="col-lg-12 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1 style="font-size: 27px;">Holiday<h1>
+                            <h2>Classes for 2 days has been cancelled because of Rain</h2>
+                            <h2 style="font-size: 16px; color:brown;">5-AUG-2022</h2>
+                        </div>    
+                    </div>
+                    <div class="col-lg-12 GradeBox">
+                        <div class="GradeboxDetails">
+                            <h1 style="font-size: 27px;">Computer Science<h1>
+                            <h2>I am Happy to introduce our new chapter. Students are required to must attend tomorrow Class</h2>
+                            <h2 style="font-size: 16px; color:brown;">4-AUG-2022</h2>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Feedback Page -->
+                <div id="FeedbackPage" style="display:none;">
+                    <div class="CardHead">
+                        <h1 class="PageHeadingL">RECORDS</h1>
+                        <h1 class="PageHeadingR">Dashboard
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                                    class="bi bi-caret-right" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                                </svg>
+                            </span>Feedback Page
+                        </h1>
+                    </div>
+                    <div class="CardBody">
+                        <form action="">
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-12 form-left">
+                                    <label class="form-label">Name</label>
+                                </div>
+                                <div class="col-lg-9 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="studentname" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-12 form-left">
+                                    <label class="form-label">Student ID</label>
+                                </div>
+                                <div class="col-lg-9 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="studentid" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-12 form-left">
+                                    <label class="form-label">Contact Number</label>
+                                </div>
+                                <div class="col-lg-9 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="contactno" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-12 form-left">
+                                    <label class="form-label">Feedback</label>
+                                </div>
+                                <div class="col-lg-9 col-md-12 form-Right">
+                                    <textarea class="form-control" id="textarea" style="height: 200px;" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-12 form-left">
+                                    <label class="form-label">Attachment</label>
+                                </div>
+                                <div class="col-lg-9 col-md-12 form-Right">
+                                    <input type="file" class="form-control" style="border: 0px;" id="attachment"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-12 form-left">
+        
+                                </div>
+                                <div class="col-lg-9 col-md-12 form-Right">
+                                    <button type="button" class="btn btn-primary form-control" onclick="Submitstudentfeedback()">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="areyoursure" id="Submitstudentfeedback" style="display:none ;">
+                    <h1>Thank You for your Valueable Feedback!</h1>
+                    <input type="button" onclick="closestudentfeedback()" value="Close" id="yesdeletedata">
+                </div>
+
+        <div class="areyoursure" id="areyousure" style="display:none ;">
+            <h1>Are you sure?</h1>
+            <input type="button" onclick="Yeslogout()" value="yes" id="yesdeletedata">
+            <input type="button" onclick="Nologout()" value="no" id="nodeletedata">
+        </div>
+    </div>
+</body>
+
+</html>

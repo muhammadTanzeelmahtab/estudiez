@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eStudiez</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="CSS/Login.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="External_Links/Bootstrap/css/bootstrap.css">
+    <script src="External_Links/Bootstrap/js/bootstrap.js"></script>
+    <!-- jQuery -->
+    <Script src="External_Links/jQuery/JQuery.js"></Script>
+    <!-- JavaScript -->
+    <script src="JavaScript/Login.js"></script>
+</head>
+
+<body>
+    <div class="loginPage">
+
+        <div id="backgreoundshapes" class="backgreoundshapes"></div>
+        <div id="backgreoundshapes1" class="backgreoundshapes"></div>
+        <div id="backgreoundshapes2" class="backgreoundshapes"></div>
+        <div id="backgreoundshapes3" class="backgreoundshapes"></div>
+        <div id="backgreoundshapes4" class="backgreoundshapes"></div>
+
+        <div class="container loginPageBody">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12 LoginPageLeft">
+                    <h1>Welcome To</h1>
+                    <img src="Assets/Logo_and_Icon/Logo.png" alt="">
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12 LoginPageRights">
+                    <form>
+                        <h1 class=" LoginFormTitle pb-4">Login</h1>
+                        <div class="form-outline mb-4">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control" required>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label">Login As</label>
+                            <select class="form-control" id="field" required>
+                                <option value="">Select Field</option>
+                                <option value="Student">Student</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Guardian">Guardians</option>
+                            </select>
+                        </div>
+                        <h1 class="Loginforgotpw">Forgot Password</h1>
+
+                        <button type="button" onclick="login()" class="btn btn-block LoginBtn">
+                            Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

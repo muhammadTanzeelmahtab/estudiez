@@ -1,0 +1,480 @@
+/* This is Globel CSS can be used in any page */
+
+/* Navbar CSS */
+.Navbar{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 8px 2px #404e6831;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    padding-left: 280px; 
+    padding-right: 30px; 
+    z-index: 99;
+}
+.left{
+    float: left;
+}
+.sidebarToggler{
+    width: 30px;
+    height: 60px;
+}
+.searchicon{
+    width: 20px;
+    margin-left: 5px;
+    height: 60px;
+}
+
+.right{
+    float: right;
+}
+.accountBox{
+    height: 60px;
+}
+.dp{
+    width: 40px;
+    margin-top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.accountPopup{
+    background-color: #242424ea;
+    border-radius: 10px;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    margin-right: 5px;
+    margin-top: 65px;
+    padding-top: 15px;
+}
+.accountPopup>ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.accountPopup>ul>li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.accountPopup>ul>li>svg{
+    width: 14px;
+    margin-right: 6px;
+    padding-bottom: 0px;
+    stroke: rgba(221, 221, 221, 0.753);
+    color: rgb(255, 255, 255);
+}
+.accountPopup>ul>li>a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.829);
+}
+.accountPopup>ul>li:hover{
+    background-color: rgba(0, 0, 0, 0.11);
+}
+.poplogout{
+    border-top: 2px solid rgba(255, 255, 255, 0.041);
+    margin-top: 10px;
+}
+
+/* Sidebar Css */
+.Sidebar{
+    background-color: #242424;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.315);
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    overflow-y: scroll;
+}
+.Sidebar::-webkit-scrollbar {
+    width: 0px;
+    background-color: rgba(177, 177, 177, 0);
+}
+.Sidebar::-webkit-scrollbar:hover {
+    width: 5px;
+    background-color: rgba(177, 177, 177, 0);
+}
+.Sidebar:hover::-webkit-scrollbar-thumb {
+    background: rgb(38, 184, 189);
+}
+.sidebarLogo{
+    width: 250px;
+    height: 60px;
+    padding-top: 5px;
+    line-height: 60px;
+    background-color: #242424;
+    position: fixed;
+}
+.sidebarLogo>img{
+    margin-top: -10px;
+    width: 100%;    
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.profilebox{
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.082);
+}
+.profilebox>img{
+    width: 60px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    border-radius: 100px;
+}
+.profilebox>h1{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 7px;
+    color: rgba(255, 255, 255, 0.945);
+}
+.profilebox>h2{
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 13px;
+    margin-top: -6px;
+    text-align: center;
+}
+.profilebox-icon{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+.profilebox-icon>svg{
+    width: 23px;
+    margin: 6px;
+    color: white;
+    background-color: rgb(78, 78, 78);
+    padding: 4px;   
+    border-radius: 20px;
+}
+.sidebar-items>h1{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.062);
+}
+.sidebar-items>ul{
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 30px;
+    margin-Right: 30px;
+}
+.sidebar-items>ul>li{
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+.sidebar-items>ul>li>a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.863);
+}
+.sidebar-items>ul>li>a>svg{
+    width: 20px;
+    margin-bottom: -4px;
+    margin-right: 10px;
+    color: white;
+}
+
+
+/* Sidebar on Minimize */
+.sidebarLogom>img{
+display: none;  
+}
+.profileboxm{
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.profileboxm>img{
+    width: 40px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    border-radius: 100px;
+}
+.profileboxm>h1{
+display: none;
+}
+.profileboxm>h2{
+    display: none;
+}
+.profilebox-iconm{
+    display: none;
+}
+.profilebox-iconm>svg{
+    width: 23px;
+    color: white;
+    background-color: rgb(78, 78, 78);
+    padding: 4px;
+    border-radius: 20px;
+}
+.sidebar-itemsm>h1{
+    display: none;
+}
+.sidebar-itemsm>ul{
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 10px;
+    margin-Right: 10px;
+}
+.sidebar-itemsm>ul>li{
+    height: 45px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.sidebar-itemsm>ul>li>a{
+    font-size: 0px;
+}
+.sidebar-itemsm>ul>li>a>svg{
+    display: flex;
+    width: 22px;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Page CSS */
+.Page{
+    width: 100%;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 250px;
+    height: auto;
+}
+.CardHead{
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 20px;
+    width: auto;
+    height: 30px;
+}
+.PageHeadingL{
+    color: rgb(122, 122, 122);
+    font-size: 18px;
+    float: left;
+    line-height: 30px;
+}
+.PageHeadingR{
+    line-height: 20x;
+    color: rgb(122, 122, 122);
+    font-size: 16px;
+    float: right;
+    margin-top: 5px;
+}
+.PageHeadingR>span{
+    line-height: 11px;
+    color: #3d81ff8c;
+}
+.PageHeadingR>span>svg{
+    margin-bottom: -4px;
+    stroke: #3d81ff46;
+}
+.CardBody{
+    color: #2c2c2c;
+    padding: 50px;
+    width: auto;
+    height: auto;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-Right: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    box-shadow: 0px 0px 7px 2px rgba(102, 102, 102, 0.24)
+}
+.CardBody-Head{
+    margin-bottom: 10px;
+}
+.CardBody-Head>h1{
+    font-size: 25px;
+    color: rgb(82, 82, 82);
+}
+.CardBody-Head>h2{
+    text-align: left;
+    font-size: 15px;
+    color: rgb(151, 150, 150);
+    letter-spacing: 0.3px;
+}
+.CardBody-Head>input{
+    width: 40%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    background-color: rgba(238, 238, 238, 0.76);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.CardBody-Head>input::placeholder{
+    color: rgba(59, 59, 59, 0.397);
+    font-size: 15px;
+}
+.CardBody-Content{
+    overflow-x: scroll;
+    width: 100%;
+
+}
+.CardBody-Content::-webkit-scrollbar{
+    background-color: #2020203a;
+}
+.CardBody-Content::-webkit-scrollbar-thumb{
+    background-color: #202020;
+}
+.CardBody-Content>.table{
+    width: 100%;
+    text-align: center;
+}
+.CardBody-Content>table>thead{
+    background-color: rgba(0, 0, 0, 0.815);
+    text-align: center;
+}
+.CardBody-Content>table>thead>tr>th{
+    font-weight: 500;
+    font-style: Arial;
+    color: rgb(238, 238, 238);
+    font-size: 15px;
+}
+.form-left{
+    text-align: right;
+    line-height: 35px;
+}
+.form-control{
+    width: 60%;
+    height: 40px;
+    background-color: #2c2c2c19;
+    color: #2c2c2c;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 10px;
+}
+@media screen and (max-width: 1000px) {
+    .form-left{
+        text-align: left;
+    }
+    .form-control{
+        width: 100%;
+    }
+  }
+
+.form-check{
+    display: inline; 
+    margin-right: 10px; 
+}
+.form-checkbox{
+    border: none;
+    background-color: #2c2c2c00;
+}
+.btn-primary{
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+    border-radius: 30px;
+}
+.GradeBoxAll>div{
+    padding: 7px;
+}
+.GradeBoxAll>h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.GradeboxDetails{
+    border-radius:10px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 4px 4px 2px rgba(0, 0, 0, 0.103);
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+.GradeboxDetails>h1{
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    color: #000000bd;
+}
+.GradeboxDetails>h2{
+    font-size: 25px;
+    line-height: 20px;
+    color: #0000009a;
+}
+
+@media screen and (max-width: 991px) {
+    .CardBody{
+        padding: 15px;
+        margin-left: 15px;
+        margin-Right: 15px;
+    }
+  }
+
+  .bgblur{
+    background-color: #2c2c2c9f;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9999;
+}
+.areyoursure{
+    top: 35%;
+    left: 200px;
+    right: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.308);
+    height: auto;
+    text-align: center;
+    width: fit-content;
+    justify-content: center;
+    border-radius: 10px;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 999999;
+}
+.areyoursure>h1{
+    color: #202020;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 12px;
+}
+.areyoursure>input{
+    width: 150px;
+    margin: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+}
+.areyoursure>input:hover{
+    background-color: #bdbdbd;
+}

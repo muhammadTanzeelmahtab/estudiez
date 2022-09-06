@@ -1,0 +1,25 @@
+/* This is for Teacher Page only */
+.addstudentresult{
+    background-color: rgb(7, 112, 161);
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+.title{
+    text-align: center;
+    padding-top: 40px;
+}
+.title2{
+    font-size: 30PX;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20PX;
+}
+.addmaterial{
+    background-color: rgb(7, 112, 161);
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+}

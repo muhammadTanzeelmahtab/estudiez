@@ -1,0 +1,128 @@
+/* This is for Student Page only */
+
+
+  /* Study Material */
+  .StudyMaterialBox{
+    border-radius:10px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 6px 4px 2px rgba(0, 0, 0, 0.158);
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    width: 100%;
+
+  }
+  .StudyMaterialHead{
+    background-color: #044c75c4;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .StudyMaterialHead>h1{
+    line-height: 20px;
+    margin-bottom:0px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.699);
+  }
+  .StudyMaterialHead>h2{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+
+  }
+  .StudyMaterialBody{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .Teacherimage{
+    border: 1px solid #044c7559;
+    width: 100%;
+    height: auto;
+  }
+  .TeacherDetails>h1{
+    font-size: 25px;
+}
+.TeacherDetails>h2{
+    font-size: 16px;
+    color: #202020ab;
+}
+.TeacherDetails>h3{
+    font-size: 14px;
+    color: #202020ab;
+}
+.StudyMaterialfooter{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid #044c750e;
+    background-color: #0000000c;
+  }
+  .StudyMaterialfooter>h1{
+    line-height: 20px;
+    margin-bottom:0px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.699);
+  }
+  .StudyMaterialfooter>h2{
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.582);
+  }
+  .StudyMaterialfooter svg{ 
+    color: rgba(0, 0, 0, 0.582);
+  }
+  .StudyMaterialfooter>div>div{ 
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* Parents Section */
+  .ParentsNotice{
+    background-color: rgba(255, 0, 0, 0.397);
+    border-radius: 10px;
+    height: auto;
+    text-align: center;
+}
+.ParentsNotice>h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ec2d2d;
+}
+.feedbackbtn{
+    background-color:  #055d91c4;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.034);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+/* progress */
+
+.progresschart{
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.199);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.progresschart>h1{
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+}

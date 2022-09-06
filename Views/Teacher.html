@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eStudiez</title>
+    <title>eStudiez</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../CSS/Globel.css">
+    <link rel="stylesheet" href="../CSS/Student.css">
+    <link rel="stylesheet" href="../CSS/Teacher.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../External_Links/Bootstrap/css/bootstrap.css">
+    <!-- jQuery -->
+    <Script src="../External_Links/jQuery/JQuery.js"></Script>
+    <!-- Bootstrap js -->
+    <script src="../External_Links/Bootstrap/js/bootstrap.js"></script>
+    <!-- JavaScript -->
+    <script src="../JavaScript/GlobelScript.js"></script>
+    <script src="../JavaScript/Teacher.js"></script>
+    <!-- Database -->
+    <!-- <script src="../Database/Students.js"></script> -->
+    <!-- Chart API CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <div class="bgblur" id="bgblue" style="display:none ;"></div>
+
+    <div class="Sidebar" id="sidebar" style="width: 250px;">
+        <div class="sidebarLogo" id="logo">
+            <img src="../Assets/Logo_and_Icon/Logo.png" alt="">
+        </div>
+        <div class="profilebox">
+            <img src="https://www.seekpng.com/png/detail/847-8474751_download-empty-profile.png" alt="">
+            <h1>Miss Muneeba</h1>
+            <h2>Teacher</h2>
+            <div class="profilebox-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                </svg>
+                <svg onclick="logout()" xmlns="http://www.w3.org/2000/svg" style="stroke: wrgb(7, 7, 7); color: white;
+                      stroke-width: 1;" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                    <path d="M7.5 1v7h1V1h-1z" />
+                    <path
+                        d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                </svg>
+            </div>
+        </div>
+        <div class="sidebar-items">
+            <ul>
+                <li id="Gradepagebar" onclick="OpenGradeBook()" style="background-color:#31a6ea ;">
+                    <a href="#" >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-journals"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                            <path
+                                d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z" />
+                        </svg>
+                        Grade Update
+                    </a>
+                </li>
+                <li id="ProgressBar" onclick="ProgressPage()">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-graph-up-arrow"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z" />
+                            </svg>
+                            Progress Update
+                        </a>
+                </li>
+
+                <li id="addmaterialbar" onclick="AddMaterialPage()">
+                    <a href="#" >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2Z" />
+                            <path
+                                d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783.059-.187.09-.386.09-.593V4a2 2 0 0 0-2-2H2Z" />
+                        </svg>
+                        Add Meterial
+                    </a>
+                </li>
+                <li id="shedulebar" onclick="AddSchedulePage()">
+                    <a href="#" >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                            <path
+                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                        Add Schedule
+                    </a>
+                </li>
+                <li id="feedbackbar" onclick="Feedbackspage()">
+                    <a href="#" >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-right-dots"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                            <path
+                                d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>
+                        Feedbacks
+                    </a>
+                </li>
+                <li id="contactbar">
+                    <a href="#" onclick="">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                        Contacts
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="Navbar" id="Navbar">
+        <div class="left">
+            <svg class="sidebarToggler" onclick="togglesidebar()" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <svg class="searchicon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </div>
+        <div class="right">
+            <div class="accountBox" onclick="accountpopup()">
+                <img class="dp" src="https://www.seekpng.com/png/detail/847-8474751_download-empty-profile.png" alt="">
+            </div>
+        </div>
+        <div class="accountPopup" id="accountpopup" style="opacity: 0;">
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-right"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                    </svg>
+                    <a href="">Inbox</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                    </svg>
+                    <a href="">Setting</a>
+                </li>
+                <li class="poplogout" onclick="Directlogout()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                        <path d="M7.5 1v7h1V1h-1z" />
+                        <path
+                            d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                    </svg>
+                    <a href="../index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="Page" id="Page">
+        <!-- Grade Page -->
+        <div id="GradePage" >
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Grades
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div>
+                    <div class="col-12">
+                        <h1 class="title">STUDENT RECENTS UPDATES</h1>
+                    </div>
+                    <div class="CardBody-Content">
+                        <table class="table mt-4 table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="col-3">Student Name</th>
+                                    <th class="col-2">Student ID</th>
+                                    <th class="col-2">C.P Marks</th>
+                                    <th class="col-2">Quiz Marks</th>
+                                    <th class="col-2">Assignment Marks</th>
+                                    <th class="col-2">Total Marks</th>
+                                    <th class="col-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="StudentMarks">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="title">STUDENT RESULT UPDATE</h1>
+                        </div>
+                        <div class="addstudentresult mt-5 col-12">
+                            <form action="">
+                                <div class="form-group row">
+                                    <div class="col-lg-4 col-md-12 form-left">
+                                        <label class="form-label">Student ID</label>
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 form-Right">
+                                        <select class="form-control">
+                                            <option value="">Select Student ID</option>
+                                            <option value="AH-2736">AH-2736</option>
+                                            <option value="AS-6253">AS-6253</option>
+                                            <option value="BA-2208">BA-2208</option>
+                                            <option value="FQ-8262">FQ-8262</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-4 col-md-12 form-left">
+                                        <label class="form-label">Quiz Marks</label>
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 form-Right">
+                                        <input type="text" class="form-control" id="marks1" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-4 col-md-12 form-left">
+                                        <label class="form-label">Assignment Marks</label>
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 form-Right">
+                                        <input type="text" class="form-control" id="marks2" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-4 col-md-12 form-left">
+                                        <label class="form-label">Assignment Marks</label>
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 form-Right">
+                                        <input type="text" class="form-control" id="marks3" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-4 col-md-12 form-left">
+                                        <label class="form-label">C.P Marks</label>
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 form-Right">
+                                        <input type="text" class="form-control" id="marks4" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-4 col-md-12 form-left">
+
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 form-Right">
+                                        <button type="button" onclick="resultupdated()"
+                                            class="btn btn-primary form-control">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Progress Page -->
+        <div id="ProgressPage" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span> Progress
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="form-group row">
+                    <div class="col-12">
+                        <h1 class="title2">SELECT STUDENT FOR PROGRESS UPDATTION</h1>
+                    </div>
+                    <div class="col-lg-4 col-md-12 form-left">
+                        <label class="form-label">Student ID</label>
+                    </div>
+                    <div class="col-lg-5 col-md-12 form-Right">
+                        <select class="form-control">
+                            <option value="">Select Student ID</option>
+                            <option value="AH-2736">AH-2736</option>
+                            <option value="AS-6253">AS-6253</option>
+                            <option value="BA-2208">BA-2208</option>
+                            <option value="FQ-8262">FQ-8262</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-0 p-0 StudyMaterial">
+
+                    <div class="col-lg-6  mt-4">
+                        <div class="progresschart">
+                            <h1>Attendence</h1>
+                            <canvas id="Class" style="width:100%;width:100%"></canvas>
+                            <script>
+                                var Title = ["Presents", "Absents", "Leaves"];
+                                var attendence = [82, 10, 8];
+                                var barColors = [
+                                    "#00a2e2",
+                                    "#595959",
+                                    "#68ff72",
+                                ];
+                                new Chart("Class", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: Title,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: attendence
+                                        }]
+                                    },
+                                });
+                            </script>
+                            <div class="form-group row m-2 mt-3">
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Total Classes Held</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Total Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Missed Classes</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 mt-2 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Missed Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Atented Classes</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 mt-2 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Attented Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 mt-3 col-md-12 form-Right">
+                                    <button type="button" onclick="progressUpdated()"
+                                        class="btn btn-primary form-control">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mt-4">
+                        <div class="progresschart">
+                            <h1>Quiz</h1>
+                            <canvas id="Quiz" style="width:100%;width:100%"></canvas>
+                            <script>
+                                var Title = ["Attempted", "Missed"];
+                                var attendence = [88, 12];
+                                var barColors = [
+                                    "#00a2e2",
+                                    "#595959",
+                                    "#eaf204",
+                                ];
+                                new Chart("Quiz", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: Title,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: attendence
+                                        }]
+                                    },
+                                });
+                            </script>
+                            <div class="form-group row m-2 mt-3">
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Total Classes Held</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Total Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Missed Classes</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 mt-2 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Missed Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Atented Classes</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 mt-2 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Attented Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 mt-3 col-md-12 form-Right">
+                                    <button type="button" onclick="progressUpdated()"
+                                        class="btn btn-primary form-control">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mt-4">
+                        <div class="progresschart">
+                            <h1>Class Participation</h1>
+                            <canvas id="CP" style="width:100%;width:100%"></canvas>
+                            <script>
+                                var Title = ["Availed", "Missed"];
+                                var attendence = [70, 30];
+                                var barColors = [
+                                    "#00a2e2",
+                                    "#595959",
+                                ];
+                                new Chart("CP", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: Title,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: attendence
+                                        }]
+                                    },
+                                });
+                            </script>
+                            <div class="form-group row m-2 mt-3">
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Total Classes Held</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Total Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Missed Classes</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 mt-2 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Missed Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-right">
+                                    <label class="form-label">Atented Classes</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12 mt-2 form-Right">
+                                    <input type="text" class="form-control" placeholder="Enter Attented Class Value"
+                                        id="marks1" required>
+                                </div>
+                                <div class="col-lg-12 mt-3 col-md-12 form-Right">
+                                    <button type="button" onclick="progressUpdated()"
+                                        class="btn btn-primary form-control">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Material Update Page -->
+        <div id="MaterilaUpdate" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Material Update
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title">Material Update</h1>
+                    </div>
+                    <div class="addmaterial mt-3 col-12">
+                        <form  class="Formsubmit" action="">
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Batch</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <select class="form-control">
+                                        <option value="">Select Batch</option>
+                                        <option value="AH-2736">A-2</option>
+                                        <option value="AS-6253">A-3</option>
+                                        <option value="BA-2208">A-4</option>
+                                        <option value="FQ-8262">A-5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Title</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="marks1" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Date</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="date" class="form-control" id="marks2" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Discription</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="marks3" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Material File</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="file" class="form-control" id="marks4">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <button type="button" onclick="materialupdated()"
+                                        class="btn btn-primary form-control">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Schedule Update Page -->
+        <div id="ScheduleUpdate" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Schedule Update
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title">Schedule Update</h1>
+                    </div>
+                    <div class="addmaterial mt-3 col-12">
+                        <form  class="Formsubmit" action="">
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Batch</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <select class="form-control">
+                                        <option value="">Select Batch</option>
+                                        <option value="AH-2736">A-2</option>
+                                        <option value="AS-6253">A-3</option>
+                                        <option value="BA-2208">A-4</option>
+                                        <option value="FQ-8262">A-5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Title</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="marks1" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Class Date</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="date" class="form-control" id="marks2" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Class Timing</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="time" class="form-control" id="marks2" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Class Discription</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="marks3" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+                                    <label class="form-label">Other Information</label>
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <input type="text" class="form-control" id="marks4">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-12 form-left">
+
+                                </div>
+                                <div class="col-lg-5 col-md-12 form-Right">
+                                    <button type="button" onclick="sheduleupdated()"
+                                        class="btn btn-primary form-control">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feedback Page -->
+        <div id="Feedback" style="display:none;">
+            <div class="CardHead">
+                <h1 class="PageHeadingL">RECORDS</h1>
+                <h1 class="PageHeadingR">Dashboard
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>Feedback
+                </h1>
+            </div>
+            <div class="CardBody">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title2">FEEDBACK RECEIVED</h1>
+                    </div>
+            <div class="CardBody-Content">
+                <table class="table mt-4 table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-6">Student</th>
+                            <th class="col-6">Parents</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th class="col-6" style="text-align: left;">I am Really Satisfied with Teacher. He is very cooprative</th>
+                        <th class="col-6" style="text-align: left;">Satisfied! I think i have taken good student to admit my son in this school</th>
+                    </tr>
+                    <tr>
+                        <th class="col-6" style="text-align: left;">Good School with best envoirment</th>
+                        <th class="col-6" style="text-align: left;">My son has improved in many terms i am very thankful to teacher</th>
+                    </tr>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+        <div class="areyoursure" id="sheduleupdated" style="display:none ;">
+            <h1>Schedule for your selected Batch is Updated Sucessfully!</h1>
+            <input type="button" value="Ok" onclick="Ok()" value="Ok">
+        </div>
+        <div class="areyoursure" id="materialupdated" style="display:none ;">
+            <h1>Material for your selected Batch is Updated Sucessfully!</h1>
+            <input type="button" value="Ok" onclick="Ok()" value="Ok">
+        </div>
+        <div class="areyoursure" id="sucessfullyupdated" style="display:none ;">
+            <h1>Result of selected student is sucessfully updated!</h1>
+            <input type="button" value="Ok" onclick="Ok()" value="Ok">
+        </div>
+        <div class="areyoursure" id="progressupdated" style="display:none ;">
+            <h1>Progress of selected student is sucessfully updated!</h1>
+            <input type="button" value="Ok" onclick="Ok()" value="Ok">
+        </div>
+        <div class="areyoursure" id="areyousure" style="display:none ;">
+            <h1>Are you sure?</h1>
+            <input type="button" onclick="Yeslogout()" value="yes" id="yesdeletedata">
+            <input type="button" onclick="Nologout()" value="no" id="nodeletedata">
+        </div>
+</body>
+
+</html>
